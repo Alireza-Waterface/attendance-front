@@ -19,8 +19,8 @@
 - **تجربه کاربری روان:** استفاده از `React.lazy` برای بارگذاری تنبل صفحات و `Suspense` برای نمایش حالت‌های لودینگ.
 - **Error Boundary:** مدیریت خطاهای غیرمنتظره و نمایش یک صفحه fallback کاربرپسند برای جلوگیری از کرش کامل برنامه.
 
-###  state مدیریتی قدرتمند
-- **TanStack (React) Query:** مدیریت کامل state سمت سرور، کش کردن داده‌ها، re-fetching خودکار و بهینه‌سازی عملکرد با prefetching.
+###  مدیریت قدرتمند State
+- **با TanStack (React) Query:** مدیریت کامل state سمت سرور، کش کردن داده‌ها، re-fetching خودکار و بهینه‌سازی عملکرد با prefetching.
 - **مدیریت state در URL:** استفاده از `useSearchParams` برای مدیریت وضعیت فیلترها، صفحه‌بندی و مرتب‌سازی، که باعث می‌شود URL همیشه منبع حقیقت باشد.
 - **هوک‌های سفارشی (Custom Hooks):** کپسوله کردن تمام منطق‌های واکشی داده و `mutations` در هوک‌های سفارشی (مانند `useUsers`, `useReports`, `useLogin`) برای کدی تمیز و قابل نگهداری.
 
@@ -44,7 +44,7 @@
 - **آیکون‌ها:** React Icons
 - **تاریخ شمسی:** React Multi Date Picker
 - **اعلان‌ها:** React Hot Toast
-- **Error Handling:** React Error Boundary
+- **مدیریت ارور (Error Handling):** React Error Boundary
 
 ## 🚀 راه‌اندازی و نصب (Setup)
 
@@ -83,4 +83,5 @@
 در حال حاضر، این یک پروژه شخصی است، اما اگر پیشنهادی برای بهبود دارید، لطفاً یک Issue باز کنید.
 
 **نویسنده:** علیرضا آبچهره || Alireza Waterface
+
 
