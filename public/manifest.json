@@ -1,0 +1,62 @@
+{
+    "name": "سامانه حضور و غیاب دانشگاه صنعتی کرمانشاه",
+    "short_name": "حضور و غیاب",
+    "description": "سامانه یکپارچه مدیریت حضور و غیاب اساتید و کارکنان دانشگاه صنعتی کرمانشاه.",
+    "lang": "fa-IR",
+    "dir": "rtl",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FBBF24",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "./logo72.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "./logo96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "./logo128.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "./logo144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "./logo152.png",
+        "sizes": "152x152",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "./logo192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "./logo384.png",
+        "sizes": "384x384",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "./logo512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable any"
+      }
+    ]
+  }

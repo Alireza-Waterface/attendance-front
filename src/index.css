@@ -1,0 +1,157 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+	font-family: 'vazir';
+	src: url(./fonts/Vazirmatn-RD-FD-Regular.woff2);
+	src: url(./fonts/Vazirmatn-RD-FD-Medium.woff2),
+	url(./fonts/Vazirmatn-RD-FD-Bold.woff2),
+	url(./fonts/Vazirmatn-RD-FD-Light.woff2),
+	url(./fonts/Vazirmatn-RD-FD-SemiBold.woff2),
+	url(./fonts/Vazirmatn-RD-FD-Thin.woff2),
+}
+
+*, *::after, *::before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   font-family: inherit;
+   font-family: 'vazir', Arial, sans-serif;
+}
+
+body {
+   overflow-x: hidden;
+}
+
+
+
+/* LOGIN PAGE STYLES */
+.login-page > div form div > input {
+	background-color: #ffa500;
+	transition: all 0.15s;
+	border-width: 2px;
+	border-color: transparent;
+	outline-width: 5px;
+	outline-color: transparent;
+}
+.login-page > div form div > input:focus {
+	background-color: #ff8400;
+	border: 2px solid #ff6200;
+	outline: 5px solid #ffa500;
+}
+.login-page > div form div > input:placeholder-shown {
+	caret-color: transparent;
+}
+.login-page > div form div > input:placeholder-shown + label {
+	top: 9px;
+	font-size: 1rem;
+}
+
+.login-page > div form div > label {
+	transition: all 0.15s;
+}
+
+.login-page > div form div > button {
+	transition: all 0.15s;
+}
+.login-page > div form div > button:active {
+	transform: translateY(3px);
+}
+
+
+
+.search-users input, .edit-user input {
+	background-color: #ffa500;
+	transition: all 0.05s;
+	border-width: 2px;
+	border-color: transparent;
+	outline-width: 5px;
+	outline-color: transparent;
+	color: #fff;
+}
+.search-users input:focus, .edit-user input:focus {
+	background-color: #ff8400;
+	border: 2px solid #ff6200;
+	outline: 5px solid #ffa500;
+}
+.search-users input::placeholder, .edit-user input::placeholder {
+	color: #fffb;
+}
+
+
+
+
+.camma:not(:last-child)::after {
+	content: '، ';
+}
+.camma:last-child::after {
+	content: ' ';
+}
+
+
+
+
+.loaderMini {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: relative;
+	animation: rotate 1s linear infinite
+}
+.loaderMini::before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	inset: 0px;
+	border-radius: 50%;
+	border: 5px solid #000 !important;
+	animation: prixClipFix 2s linear infinite ;
+}
+
+@keyframes rotate {
+	100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+	0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+	25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+	50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+	75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+	100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+
+
+.loader {
+	width: 30px;
+	height: 30px;
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); */
+	margin: 5rem auto;
+	border-radius: 50%;
+	background: #fff;
+	animation: wave 1s ease-in infinite;
+}
+
+@keyframes wave {
+	0% {  box-shadow:
+		0 0 0 0px rgba(245, 158, 11, 1),      /* amber-500 */
+		0 0 0 15px rgba(251, 191, 36, 0.2),  /* amber-400 */
+		0 0 0 30px rgba(252, 211, 77, 0.6),  /* amber-300 */
+		0 0 0 45px rgba(253, 230, 138, 0.4), /* amber-200 */
+		0 0 0 60px rgba(254, 243, 199, 0.2)   /* amber-100 */
+	}
+	100% {  box-shadow:
+		0 0 0 60px rgba(245, 158, 11, 0),      /* amber-500 */
+		0 0 0 45px rgba(251, 191, 36, 0.2),  /* amber-400 */
+		0 0 0 30px rgba(252, 211, 77, 0.4),  /* amber-300 */
+		0 0 0 15px rgba(253, 230, 138, 0.6), /* amber-200 */
+		0 0 0 0px rgba(254, 243, 199, 1)   /* amber-100 */
+	}
+}
