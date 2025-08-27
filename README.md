@@ -1,10 +1,10 @@
 # سامانه حضور و غیاب دانشگاه - بخش فرانت‌اند (Frontend)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/React-18.x-61DAFB.svg?style=for-the-badge&logo=react" alt="React">
-  <img src="https://img.shields.io/badge/React%20Router-6.x-CA4245.svg?style=for-the-badge&logo=react-router" alt="React Router">
+  <img src="https://img.shields.io/badge/React-19.x-61DAFB.svg?style=for-the-badge&logo=react" alt="React">
+  <img src="https://img.shields.io/badge/React%20Router-7.x-CA4245.svg?style=for-the-badge&logo=react-router" alt="React Router">
   <img src="https://img.shields.io/badge/TanStack%20Query-5.x-FF4154.svg?style=for-the-badge&logo=react-query" alt="React Query">
-  <img src="https://img.shields.io/badge/Tailwind%20CSS-3.x-06B6D4.svg?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-4.x-06B6D4.svg?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS">
 </p>
 
 این ریپازیتوری شامل کد کامل بخش فرانت‌اند برای **سامانه هوشمند حضور و غیاب دانشگاه** است. این برنامه به صورت یک **Single-Page Application (SPA)** با استفاده از React ساخته شده و یک رابط کاربری مدرن، واکنش‌گرا و کارآمد برای تعامل با بک‌اند سامانه فراهم می‌کند.
@@ -83,3 +83,4 @@
 در حال حاضر، این یک پروژه شخصی است، اما اگر پیشنهادی برای بهبود دارید، لطفاً یک Issue باز کنید.
 
 **نویسنده:** علیرضا آبچهره || Alireza Waterface
+
