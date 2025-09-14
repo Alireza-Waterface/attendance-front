@@ -7,7 +7,6 @@ import { useUser } from "../features/auth/hooks/useUser";
 import Loading from "../ui/Loading";
 import Select from "../ui/Select";
 
-// Import the new widget components we will create
 import KpiStats from "../features/dashboard/components/KpiStats";
 import AttendanceChart from "../features/dashboard/components/AttendanceChart";
 import DepartmentPerformanceChart from "../features/dashboard/components/DepartmentPerformanceChart";
@@ -61,21 +60,17 @@ function Dashboard() {
 				</div>
 			</div>
 
-			{/* Main Dashboard Grid */}
 			<div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-				{/* KPIs (Top Row) */}
 				<div className="lg:col-span-4">
 					<KpiStats stats={dashboardData?.kpiStats} />
 				</div>
 
-				{/* Attendance Trend Chart (Main Chart) */}
 				<div className="lg:col-span-3 bg-whit rounded-lg shadow">
 					<AttendanceChart
 						data={dashboardData?.charts?.attendanceByDay}
 					/>
 				</div>
 
-				{/* Department Performance (Side Chart) */}
 				<div
 					className="lg:col-span-1 bg-white rounded-lg shadow"
 					style={{ minWidth: 350 }}
@@ -94,7 +89,6 @@ function Dashboard() {
 					</div>
 				)}
 
-				{/* Top & Risky Performers (Bottom Row) */}
 				<div className="lg:col-span-2 bg-white rounded-lg shadow">
 					<PerformersList
 						title="کاربران منظم (کمترین تاخیر)"
@@ -109,7 +103,6 @@ function Dashboard() {
 					/>
 				</div>
 
-				{/* ML Insights */}
 				<div className="lg:col-span-4">
 					<MlInsights data={dashboardData?.ml} />
 				</div>

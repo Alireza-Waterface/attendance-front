@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import ClusterAnalysis from "./ClusterAnalysis";
+
 function MlInsights({ data }) {
 	const { anomalies, clusters } = data || {};
 
@@ -12,7 +15,17 @@ function MlInsights({ data }) {
 					{anomalies && !anomalies.error && anomalies.length > 0 ? (
 						<ul className="list-disc list-inside text-sm text-red-600">
 							{anomalies.map((a) => (
-								<li key={a.record_id}>{a.fullName}</li>
+								<li
+									key={a.record_id}
+									className="p-2 bg-red-50 border-l-4 border-red-400"
+								>
+									<Link to={`/register?search=${a.fullName}`} className="font-bold text-md text-red-500 hover:text-red-700 transition-all">
+										{a.fullName}
+									</Link>
+									<p className="text-red-600">
+										{a.explanation}
+									</p>
+								</li>
 							))}
 						</ul>
 					) : (
@@ -21,22 +34,9 @@ function MlInsights({ data }) {
 						</p>
 					)}
 				</div>
+
 				<div>
-					<h3 className="font-semibold mb-2">
-						خوشه‌بندی رفتاری کاربران
-					</h3>
-					{clusters && !clusters.error && clusters.length > 0 ? (
-						<p className="text-sm text-gray-500">
-							تحلیل خوشه‌بندی برای {clusters.length} کاربر انجام
-							شد.
-						</p>
-					) : (
-						// Here you could add a pie chart showing cluster distribution
-						<p className="text-sm text-gray-500">
-							{clusters?.error ||
-								"داده کافی برای تحلیل خوشه‌بندی وجود ندارد."}
-						</p>
-					)}
+					<ClusterAnalysis clustersData={clusters} />
 				</div>
 			</div>
 		</div>
