@@ -1,9 +1,12 @@
 import authFetch from "../utils/authFetch";
 
-export async function getTodayRecords({ sortBy, role }) {
+export async function getTodayRecords({ sortBy, role, search, page, limit }) {
 	const params = new URLSearchParams();
 	if (sortBy) params.append("sortBy", sortBy);
 	if (role) params.append("role", role);
+	if (search) params.append("search", search);
+	if (page) params.append("page", page);
+	if (limit) params.append("limit", limit);
 
 	const res = await authFetch(
 		`${

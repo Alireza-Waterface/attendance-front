@@ -6,9 +6,10 @@ import RegisterFilters from "../features/attendance/components/RegisterFilters";
 import TodayRecordList from "../features/attendance/components/TodayRecordList";
 
 import Modal from "../ui/Modal";
+import Pagination from "../ui/Pagination";
 
 function Register() {
-	const { todayRecords, isGettingRecords } = useTodayRecords();
+	const { todayRecords, isGettingRecords, pagination } = useTodayRecords();
 	const { deleteAttendance, isDeleting } = useDeleteAttendance();
 
 	return (
@@ -35,18 +36,19 @@ function Register() {
 				</Modal>
 			</div>
 
-			<div className="flex items-center gap-4 justify-between mb-4">
-				<h2 className="text-xl font-semibold">
-					گزارش‌های ثبت شده امروز
-				</h2>
-				<RegisterFilters />
-			</div>
+			<RegisterFilters />
 
 			<TodayRecordList
 				todayRecords={todayRecords}
 				isGettingRecords={isGettingRecords}
 				deleteAttendance={deleteAttendance}
 				isDeleting={isDeleting}
+			/>
+
+			<Pagination
+				pagination={pagination}
+				isLoading={isGettingRecords}
+				length={todayRecords?.length}
 			/>
 		</div>
 	);

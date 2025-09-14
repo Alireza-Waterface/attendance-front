@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import Select from "../../../ui/Select";
+import Search from "../../../ui/Search";
 import { ROLES } from "../../../utils/constants";
 
 function RegisterFilters() {
@@ -11,7 +12,9 @@ function RegisterFilters() {
 	}
 
 	return (
-		<div className="flex items-center gap-4 bg-amber-200 p-2 rounded-md">
+		<div className="flex items-center justify-between gap-4 p-2 rounded-md bg-amber-200 mb-4">
+			<Search />
+
 			<div className="flex items-center gap-2">
 				<Select
 					label="نقش:"
@@ -44,6 +47,24 @@ function RegisterFilters() {
 						options.map((option) => (
 							<option value={option.value} key={option.key}>
 								{option.key}
+							</option>
+						))
+					}
+				/>
+			</div>
+
+			<div className="flex items-center gap-2">
+				<Select
+					label="تعداد در صفحه:"
+					identifier="limit"
+					defaultValue={searchParams.get("limit") || ""}
+					onChange={handleFilterChange}
+					options={[10, 20, 30, 40, 50, 100]}
+					hasAllOption={false}
+					render={(options = []) =>
+						options.map((option) => (
+							<option key={option} value={option}>
+								{option}
 							</option>
 						))
 					}

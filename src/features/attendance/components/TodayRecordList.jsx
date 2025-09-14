@@ -22,8 +22,8 @@ function TodayRecordList({
 	}
 
 	return (
-		<ul className="flex flex-col gap-2">
-			{todayRecords.map((rec) => (
+		<ul className="flex flex-col gap-2 mb-4">
+			{todayRecords?.map((rec) => (
 				<TodayRecordRow
 					key={rec._id}
 					rec={rec}
