@@ -25,8 +25,6 @@ export default function CreateUserForm({ onClose }) {
             password: formData.password
         };
         
-        // console.log(preparedData);
-
         createUser(preparedData, {
             onSuccess: () => {
                 onClose?.();
